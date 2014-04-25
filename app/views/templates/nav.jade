@@ -1,0 +1,43 @@
+nav.navbar.navbar-inverse(role='navigation')
+    .container-fluid
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-9')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='#') Brand
+      #bs-example-navbar-collapse-9.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.active
+            a(href='#') Home
+          li
+            a(href='#jobs') Jobs
+          li
+            a(href='#about') About
+
+        if user && user.nickname
+          ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Bienvenue
+
+                b.caret
+              ul.dropdown-menu
+                li
+                  a.logout Logout
+                li
+                  a.logout Profile
+        else
+           ul.nav.navbar-nav.navbar-right
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Not logged
+
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='#user/login') Login
+                li
+                  a(href='#user/create') Join us
+                  

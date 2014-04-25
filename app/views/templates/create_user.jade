@@ -1,0 +1,78 @@
+bs-docs-section
+    .row
+        .col-lg-12
+          .page-header
+            h1#forms Forms
+      .row
+        .col-lg-6
+          .well.bs-component
+            form.form-horizontal
+
+              fieldset
+                  legend Create user
+                  
+                  .input-group
+                    span.input-group-addon Prenom
+                    input#inputFirstName.form-control(type='text', placeholder='Prenom')
+                  br
+                  .input-group
+                    span.input-group-addon Nom
+                    input#inputLastName.form-control(type='text', placeholder='Nom')
+                  br  
+                  .input-group
+                    span.input-group-addon Date Naissance
+                    input#inputBirthDate.form-control(type='date', placeholder='Date de naissance')
+                  br
+                  .input-group
+                    span.input-group-addon @
+                    input#inputEmail.form-control(type='text', placeholder='Email')
+                  br
+                  .input-group
+                    span.input-group-addon phone #
+                    input#inputPhone.form-control(type='text', placeholder='Telephone')
+                  br
+                  .input-group
+                    span.input-group-addon password
+                    input#inputPassword.form-control(type='password', placeholder='Password')
+                  br
+                  //- .form-group
+                  //-   label.col-lg-2.control-label(for='inputPasswordRepeat') Repeat Password
+                  //-   .col-lg-10
+                  //-     input#inputPasswordConfirm.form-control(type='password', placeholder='Password')
+                  .input-group
+                    span.input-group-addon Pays Residence
+                    input#inputCountry.inputCountry.form-control(type='text', placeholder='Pays')
+                  br
+                  .input-group
+                    span.input-group-addon Ville Residence
+                    input#inputCity.form-control(type='text', placeholder='Ville')
+                  br
+                  .input-group
+                    span.input-group-addon Pays Souhaites
+                    i.icon-search#addDesiredCountry
+                    #desiredContainer
+                    input#inputDesiredCountry.inputCountry.form-control(type='text', placeholder='Pays Souhaites')
+                  br
+                  .input-group
+                    span.input-group-addon Specialites
+                    button#addTag.btn.btn-mini.btn-primary(type='button', style='display: none;') Add
+                    #tagContainer
+                    input#inputSpecialities.form-control(type='text', placeholder='Specialites')
+                  br
+                  .input-group
+                    span.input-group-addon Sinqonyme
+                    input#inputNickname.form-control(type='text', placeholder='Pseudo')
+                  br
+                  .input-group
+                    span.input-group-addon Pays precedents
+                    button#addPreviousCountry.btn.btn-mini.btn-primary(type='button', style='display: none;') Add
+                    #previousContainer
+                    input#inputInternationnalExperience.form-control(type='text', placeholder='Experiences Internationnales')
+                  br
+                  .input-group
+                    span.input-group-addon Ouvert a des opportunites
+                    input#inputOnpenForOpportunities(type='checkbox')
+                  br
+                  .input-group
+                    button.btn.btn-default.cancel Cancel
+                    button.btn.btn-primary.saveButton Submit
